@@ -67,13 +67,13 @@ class spritesheetmatrix(object):
         return int(self.rows * self.cols)
 
     def get_forward_sprites(self):
-        return self.sprites[0::4]
+        return self.sprites[0::self.cols]
 
     def get_backward_sprites(self):
-        return self.sprites[2::4]
+        return self.sprites[2::self.cols]
 
     def get_right_sprites(self):
-        return self.sprites[1::4]
+        return self.sprites[1::self.cols]
 
     def get_left_sprites(self):
-        return self.sprites[3::4]
+        return self.sprites[3::self.cols]
