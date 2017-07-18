@@ -17,7 +17,7 @@ DISPLAYSURF = pygame.display.set_mode((WIDTH, HEIGHT), 0, 32)
 pygame.display.set_caption('Animation')
 
 WHITE = (255, 255, 255)
-ss = spritesheetmatrix.spritesheet('images/F_07.png', SPRITE_ROWS, SPRITE_COLS, WHITE)
+ss = spritesheetmatrix.spritesheetmatrix('images/F_07.png', SPRITE_ROWS, SPRITE_COLS, WHITE)
 
 personX = OFFSET_X
 personY = OFFSET_Y

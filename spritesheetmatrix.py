@@ -2,7 +2,8 @@
 
 import pygame
 
-class spritesheet(object):
+
+class spritesheetmatrix(object):
     def __init__(self, filename, rows=3, cols=4, colorkey=None, scale=1):
         try:
             self.rows = int(rows)
@@ -13,9 +14,11 @@ class spritesheet(object):
 
             self.sheet = pygame.image.load(filename)
             dimensions = self.sheet.get_rect().size
-            self.sheet = self.sheet.convert()
+            # self.sheet = self.sheet.convert()
             self.sprite_width = int(dimensions[0] / cols)
             self.sprite_height = int(dimensions[1] / rows)
+            if self.sheet.get_masks()[3]!=0:
+                print("image has alpha!")
 
             if scale is not 1:
                 self.sheet = pygame.transform.scale(self.sheet, (scale, scale))
