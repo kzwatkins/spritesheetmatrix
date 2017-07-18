@@ -3,9 +3,11 @@ from pygame.locals import *
 
 pygame.init()
 
+# Colors
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 
+# Some set info
 FPS = 30 # frames per second setting
 HEIGHT = 400
 WIDTH = 400
@@ -16,8 +18,8 @@ SPRITE_COLS = 4
 
 fpsClock = pygame.time.Clock()
 
-DISPLAYSURF = pygame.display.set_mode((WIDTH, HEIGHT), 0, 32)
-pygame.display.set_caption('Animation')
+DISPLAYSURF = pygame.display.set_mode((WIDTH, HEIGHT))
+pygame.display.set_caption('Spritesheet Matrix Usage')
 
 ss = spritesheetmatrix.spritesheetmatrix('images/F_07.png', SPRITE_ROWS, SPRITE_COLS, BLACK)
 
